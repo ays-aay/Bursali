@@ -1,5 +1,6 @@
 field,display_name,btn,hidden,sort_name
-date,Date,,,Date
-creator,Creator,,,
-subject,,true
-location,,true
+muellif_adi,Müellif,,,Müellif
+title,Eser Adı,,,Eser Adı
+telif_tarih_miladi,Telif Tarihi,,,Tarih
+muellif_olum_tarihi,Müellif Ölüm Tarihi,,,
+padisah_donemi,Padişah Dönemi,,,
