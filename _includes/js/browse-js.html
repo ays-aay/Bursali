@@ -21,16 +21,18 @@ function makeCard(obj) {
     var itemHref = "{{ '/item.html' | relative_url | append: '?id=' }}" + obj.link;
     
     // Sıralama alanına göre kart başlığını belirle
-    var cardTitle = obj.muellif_adi || "Müellif Bilinmiyor";
-    if(currentSortField === "telif_tarih_miladi" && obj.telif_tarih_miladi) {
-        cardTitle = obj.telif_tarih_miladi;
-    } else if(currentSortField === "muellif_olum_tarihi" && obj.muellif_olum_tarihi) {
-        cardTitle = obj.muellif_olum_tarihi;
-    } else if(currentSortField === "padisah_donemi" && obj.padisah_donemi) {
-        cardTitle = obj.padisah_donemi;
-    } else if(currentSortField === "eser_adi" && obj.eser_adi) {
-        cardTitle = obj.eser_adi;
-    }
+   var cardTitle;
+if (currentSortField === "eser_adi") {
+    cardTitle = obj.eser_adi || obj.muellif_adi || "Bilinmiyor";
+} else if (currentSortField === "telif_tarih_miladi") {
+    cardTitle = obj.telif_tarih_miladi || obj.muellif_adi || "Bilinmiyor";
+} else if (currentSortField === "muellif_olum_tarihi") {
+    cardTitle = obj.muellif_olum_tarihi || obj.muellif_adi || "Bilinmiyor";
+} else if (currentSortField === "padisah_donemi") {
+    cardTitle = obj.padisah_donemi || obj.muellif_adi || "Bilinmiyor";
+} else {
+    cardTitle = obj.muellif_adi || "Müellif Bilinmiyor";
+}
 
     var card = '<div class="item col-lg-4 col-md-6 col-sm-12 mb-2"><div class="card h-100">';
     card += '<div class="card-body">';
