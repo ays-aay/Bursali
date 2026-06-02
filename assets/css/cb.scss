@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('/Tevarih/assets/img/background.jpg') !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  background-position: center top !important;
+  background-position: bottom center !important;
 }
 
 .display-4 {
@@ -82,19 +82,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700 !important;
 }
 
-/* --- Sayfa içeriği --- */
-.container, .container-fluid {
-  max-width: 860px !important;
+/* --- Sayfa içeriği girintisi azalt --- */
+.container {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
-.page-content h2, .col-md-8 h2, main h2 {
+/* --- Hakkında / Yöntem / Babinger sayfa içeriği --- */
+.page-content h2, main h2 {
   margin-top: 2rem !important;
   margin-bottom: 1rem !important;
   font-family: 'Playfair Display', Georgia, serif !important;
   font-weight: 700 !important;
 }
 
-.page-content p, .col-md-8 p, main p {
+.page-content p, main p {
   margin-bottom: 1rem !important;
   line-height: 1.8 !important;
   font-family: 'Source Serif 4', Georgia, serif !important;
