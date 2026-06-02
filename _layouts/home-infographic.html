@@ -15,7 +15,12 @@ layout: page
     {% include index/time.html %}
 
     {% include index/featured-terms.html field="subject" title="Konular" btn-color="primary" %}
-{% include index/map-terms.html title="Coğrafya" btn-color="outline-secondary" %}
+<div class="card mb-3">
+    <div class="card-body">
+        <h2 class="card-title h5">Coğrafya</h2>
+        <a class="btn btn-outline-secondary" href="{{ '/map.html' | relative_url }}">Haritayı Gör</a>
+    </div>
+</div>
     {% include index/objects.html %}
 
   </div>
