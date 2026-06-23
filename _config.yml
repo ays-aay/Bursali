@@ -13,28 +13,20 @@
 # on GitHub Pages it is your github repository's name prefixed with a /
 #baseurl: /collectionbuilder-gh 
 # location of code, the full url to your github repository
-source-code: https://github.com/CollectionBuilder/collectionbuilder-gh
+source-code: https://github.com/ays-aay/M.Tahir
 ##########
 # SITE SETTINGS
 #
-# title of site appears in banner
-title: Tevârih
-# tagline, a short phrase that will appear throughout the site in the top banner
-tagline: Babinger'in Osmanlı Tarih Yazarları ve Eserleri adlı çalışmasını temel alan Dijital Envanter
-# description appears in meta tags and other locations
-# this description might appear in search result lists, keep around 160 characters max
-description: "Tevârih, Franz Babinger'in Osmanlı Tarih Yazarları ve Eserleri (Geschichtsschreiber der Osmanen und ihre Werke) adlı eserini temel alan dijital bir katalog çalışmasıdır. Koleksiyon, eserde yer alan müellifler ve eserlerine ilişkin verileri; yazma nüshaların bulunduğu kütüphane bilgileriyle birlikte bir araya getirmektedir"
-# creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
-author: DBB-M-Tevarih
+title: Tevârih-II
+tagline: Bursalı Mehmed Tâhir'in Osmanlı Müellifleri'nin 3. Cildini temel alan Dijital Envanter
+description: "Tevârih-II, Bursalı Mehmed Tâhir'in Osmanlı Müellifleri adlı eserinin 3. cildini temel alan dijital bir katalog çalışmasıdır. Koleksiyon, eserde yer alan müellifler ve eserlerine ilişkin verileri bir araya getirmektedir."
+author: ays-aay
 ##########
 # COLLECTION SETTINGS
 #
-# Set the metadata for your collection (the name of the csv file in your _data directory that describes the objects in your collection) 
-# Use the filename of your CSV **without** the ".csv" extension! E.g. _data/demo-babinger_cb.csv --> "demo-babinger_cb"
-metadata: babinger_cb
+metadata: tahir_cb
 ##########
 # Site/Organization Branding 
-#   Uncomment these and enter information for your organization (replacing the CDIL links and name below) if you'd like to brand your site with a logo
 #
 organization-name: "Marmara Üniversitesi Dijital Beşeri Bilimler Araştırma Merkezi"
 organization-link: https://dbb.marmara.edu.tr/
@@ -42,17 +34,10 @@ organization-link: https://dbb.marmara.edu.tr/
 ##########
 # ROBOTS EXCLUDE
 #
-# set noindex to true if you do NOT want Google to index your site
 # noindex: true 
 ##########
 # BUILD SETTINGS 
 #
-# Note: use environment variable on build command to include analytics
-# JEKYLL_ENV=production jekyll build
-# (this is done automatically by gh-pages build)
-#
-# ignore stuff
 exclude: [docs/, Rakefile, README.md, LICENSE, CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTING.md]
-# compress CSS output
 sass:
   style: compressed
