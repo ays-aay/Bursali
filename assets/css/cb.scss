@@ -1,15 +1,11 @@
 ---
 # base CSS for collectionbuilder
-# includes some theming elements
-# pulled in from "theme.yml" and "config-theme-colors.csv"
 ---
 @charset "utf-8";
-/* base variables pulled from theme.yml */
 $base-font-family: {{ site.data.theme.base-font-family | default: '""' }};
 $base-font-size: {{ site.data.theme.base-font-size | default: '""' }};
 $text-color: {{ site.data.theme.text-color | default: '""' }};
 $link-color: {{ site.data.theme.link-color | default: '""' }};
-/* theme colors pulled from config-theme-colors */
 {% assign btns = site.data.config-theme-colors | where_exp: "item","item.color != nil" %}
 {% if btns != empty %}
 {% for btn in btns %}
@@ -29,7 +25,6 @@ $theme-colors: map-merge(
 {% endif %}
 @import "base", "pages", "custom";
 
-/* --- Fontlar --- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 
 body {
@@ -48,10 +43,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Banner --- */
 #home-banner {
-  background-image: url('/Tevarih/assets/img/background.jpg') !important;
+  background-image: url('../img/background.jpg') !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  background-position: 0% 30% !important;
+  background-position: center 20% !important;
 }
 
 .display-4 {
@@ -68,27 +63,64 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Kartlar --- */
 .card {
   background-color: rgba(255, 255, 255, 0.95);
+  border-color: #d4a843 !important;
+}
+
+.card-footer {
+  border-top-color: #d4a843 !important;
 }
 
 /* --- Navbar --- */
 .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
   font-family: 'Source Serif 4', Georgia, serif !important;
 }
 
+.navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: #ffffff !important;
-  font-weight: 700 !important;
+  color: #d4a843 !important;
 }
 
-/* --- Sayfa içeriği girintisi azalt --- */
+/* --- Butonlar --- */
+.btn-primary {
+  background-color: #8B1A1A !important;
+  border-color: #8B1A1A !important;
+  color: #fff !important;
+}
+
+.btn-warning {
+  background-color: #d4a843 !important;
+  border-color: #d4a843 !important;
+  color: #fff !important;
+}
+
+/* --- Linkler --- */
+a {
+  color: #8B1A1A !important;
+}
+
+a:hover {
+  color: #d4a843 !important;
+}
+
+/* --- Skip link gizle --- */
+#skip-to-content {
+  display: none !important;
+}
+
+/* --- Scroll to top gizle --- */
+#scroll-to-top {
+  display: none !important;
+}
+
+/* --- Sayfa içeriği --- */
 .container {
   padding-left: 1rem !important;
   padding-right: 1rem !important;
 }
 
-/* --- Hakkında / Yöntem / Babinger sayfa içeriği --- */
 .page-content h2, main h2 {
   margin-top: 2rem !important;
   margin-bottom: 1rem !important;
